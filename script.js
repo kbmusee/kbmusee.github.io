@@ -4,56 +4,56 @@ const data = [
         title: 'VIBRANT',
         title2: 'HUES',
         description: 'Acrylic paintings are known for their vibrant colors and versatility. This medium allows for a range of textures and techniques, making it a favorite among contemporary artists. It dries quickly, enabling artists to layer colors and create dynamic compositions.',
-        image: '/kbmusee/1.JPG'
+        image: 'https://kbmusee.github.io/kbmusee/1.JPG'
     },
     {
         place: 'Watercolor',
         title: 'TRANSPARENT',
         title2: 'BEAUTY',
         description: 'Watercolor painting is admired for its delicate and translucent qualities. Artists use water to blend colors seamlessly, creating ethereal effects and soft gradients. This medium is often used to capture landscapes, botanicals, and expressive portraits.',
-        image: '/kbmusee/2.JPG'
+        image: 'https://kbmusee.github.io/kbmusee/2.JPG'
     },
     {
         place: 'Ink Wash Painting',
         title: 'MONOCHROME',
         title2: 'ELEGANCE',
         description: 'Ink wash painting, also known as literati painting, emphasizes simplicity and expressiveness. It uses varying tones of black ink on paper or silk to create depth and contrast. This traditional Asian art form often depicts natural scenes, animals, and calligraphy.',
-        image: '/kbmusee/3.JPG'
+        image: 'https://kbmusee.github.io/kbmusee/3.JPG'
     },
     {
         place: 'Traditional Chinese Realistic Painting',
         title: 'METICULOUS',
         title2: 'DETAIL',
         description: 'Traditional Chinese realistic painting, also known as Gongbi, is characterized by its precise and detailed brushwork. It often features intricate depictions of flora, fauna, and historical figures, capturing the beauty and elegance of each subject with remarkable accuracy.',
-        image: '/kbmusee/6.JPG'
+        image: 'https://kbmusee.github.io/kbmusee/6.JPG'
     },
     {
         place: 'Sumi-e',
         title: 'ZEN',
         title2: 'ARTISTRY',
         description: 'Sumi-e is a Japanese ink painting technique that embodies Zen principles. It focuses on the beauty of simplicity, using minimal brushstrokes to convey the essence of a subject. Common themes include bamboo, plum blossoms, landscapes, and animals.',
-        image: '/kbmusee/4.JPG'
+        image: 'https://kbmusee.github.io/kbmusee/4.JPG'
     },
     {
         place: 'Digital',
         title: 'MODERN',
         title2: 'CREATIVITY',
         description: 'Digital art encompasses a wide range of styles and techniques, created using digital tools and software. This medium offers endless possibilities for experimentation and innovation, allowing artists to create intricate designs, animations, and interactive works.',
-        image: '/kbmusee/8.JPG'
+        image: 'https://kbmusee.github.io/kbmusee/8.JPG'
     },
     {
         place: 'Sketch',
         title: 'RAW',
         title2: 'ESSENCE',
         description: 'Sketching captures the raw essence of an idea with quick, expressive lines. It is often the first step in the creative process, allowing artists to explore compositions and forms. Sketches can range from simple outlines to detailed studies, showcasing the artist\'s skill and vision.',
-        image: '/kbmusee/7.png'
+        image: 'https://kbmusee.github.io/kbmusee/7.png'
     },
     {
         place: 'Pastel',
         title: 'SOFT',
         title2: 'TONES',
         description: 'Pastel artwork is known for its soft, velvety texture and rich, vibrant colors. Artists use pastel sticks to apply pigment directly to paper, blending and layering to achieve depth and luminosity. This medium is popular for portraits, landscapes, and still lifes.',
-        image: '/kbmuse/9.jpg'
+        image: 'https://kbmusee.github.io/kbmusee/9.jpg'
     }
 ];
 
