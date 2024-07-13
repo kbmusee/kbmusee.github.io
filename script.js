@@ -11,7 +11,7 @@ const data = [
         title: 'TRANSPARENT',
         title2: 'BEAUTY',
         description: 'Watercolor painting is admired for its delicate and translucent qualities. Artists use water to blend colors seamlessly, creating ethereal effects and soft gradients. This medium is often used to capture landscapes, botanicals, and expressive portraits.',
-        image: '/kbmusee/2.jpg'
+        image: '/kbmusee/2.JPG'
     },
     {
         place: 'Ink Wash Painting',
