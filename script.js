@@ -225,6 +225,7 @@ let currentDataSet = "default";
 const _ = (id) => document.getElementById(id);
 loadDataSet();
 function loadDataSet(){
+  document.getElementById('contact-section').style.display = 'none';
   const cards = dataSets[currentDataSet].map((i, index)=>`<div class="card" id="card${index}" style="background-image:url(${i.image})"  ></div>`).join('');
 
   const cardContents = dataSets[currentDataSet].map((i, index)=>`<div class="card-content" id="card-content-${index}">

@@ -11,13 +11,17 @@
 <body>
 <!-- partial:index.partial.html -->
 <body>
+    <div class="hamburger" id="hamburger">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
     <div class="indicator"></div>
-
     <nav>
       <div>
-        <div>KB Musee</div>
+        <div id="logo">KB Musee</div>
       </div>
-      <div>
+      <div id="nav-items">
         <div class="active" id="default-btn">Home</div>
         <div class="program" id="hourly-btn">2 Hour Painting Sessions</div>
         <div class="program" id="after-school-btn">After School Classes</div>
@@ -128,6 +132,14 @@
   </body>
 <!-- partial -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js'></script><script  src="./script.js"></script>
+  <script>
+    // JavaScript to handle the hamburger menu toggle
+    const hamburger = document.getElementById('hamburger');
+    const navItems = document.getElementById('nav-items');
 
+    hamburger.addEventListener('click', () => {
+      navItems.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
