@@ -307,27 +307,32 @@ nav > div:last-child > .active:after {
   background-color: white;
   border-radius: 2px;
 }
-
+.hamburger.rotate {
+  transform: rotate(90deg);
+}
 /* Hide nav items and show hamburger menu on mobile */
 @media (max-width: 768px) {
-  nav div {
-    display: none;
-  }
   .hamburger {
     display: flex;
 
   }
-  
-  .nav-links {
+   #nav-items {
     display: none;
   }
   
-  .nav-links a:last-child {
+   #nav-items a:last-child {
     border-bottom: none;
   }
 
   #nav-items.active {
     display: flex;
+    position: absolute;
+    z-index: 9999;
+    flex-direction: column;
+    background-color: #1a1a1a88;
+    right: 0px;
+    top: 0px;
+    padding: 20px;
   }
   
 }
