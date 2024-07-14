@@ -542,3 +542,21 @@ async function start() {
 }
 
 start();
+
+document.getElementById('learn-more-btn').addEventListener('click', function() {
+    showContactSection();
+});
+
+document.getElementById('learn-more-btn-2').addEventListener('click', function() {
+    showContactSection();
+});
+
+document.getElementById('contact-btn').addEventListener('click', function() {
+    showContactSection();
+});
+
+function showContactSection() {
+    // Hide other sections and show contact section
+    document.getElementById('demo').style.display = 'none';
+    document.getElementById('contact-section').style.display = 'block';
+}
