@@ -394,31 +394,31 @@ function step() {
     gsap.to(`${detailsActive} .text`, {
       y: 0,
       delay: 0.1,
-      duration: 0.7,
+      duration: 6,
       ease,
     });
     gsap.to(`${detailsActive} .title-1`, {
       y: 0,
       delay: 0.15,
-      duration: 0.7,
+      duration: 1,
       ease,
     });
     gsap.to(`${detailsActive} .title-2`, {
       y: 0,
       delay: 0.15,
-      duration: 0.7,
+      duration: 1,
       ease,
     });
     gsap.to(`${detailsActive} .desc`, {
       y: 0,
       delay: 0.3,
-      duration: 0.4,
+      duration: 1,
       ease,
     });
     gsap.to(`${detailsActive} .cta`, {
       y: 0,
       delay: 0.35,
-      duration: 0.4,
+      duration: 1,
       onComplete: resolve,
       ease,
     });
@@ -434,7 +434,7 @@ function step() {
     gsap.to(getCardContent(active), {
       y: offsetTop + cardHeight - 10,
       opacity: 0,
-      duration: 0.3,
+      duration: 1,
       ease,
     });
     gsap.to(getSliderItem(active), { x: 0, ease });
@@ -561,3 +561,13 @@ function showContactSection() {
     document.getElementById('demo').style.display = 'none';
     document.getElementById('contact-section').style.display = 'block';
 }
+const navItems = document.querySelectorAll('#nav-items .program, #nav-items .active');
+
+navItems.forEach(item => {
+item.addEventListener('click', function() {
+  // Remove 'active' class from all items
+  navItems.forEach(nav => nav.classList.remove('active'));
+  // Add 'active' class to the clicked item
+  this.classList.add('active');
+});
+});
