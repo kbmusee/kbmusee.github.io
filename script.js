@@ -1,3 +1,14 @@
+let order = [0, 1, 2, 3, 4, 5];
+let detailsEven = true;
+
+let offsetTop = 200;
+let offsetLeft = 700;
+let cardWidth = 200;
+let cardHeight = 300;
+let gap = 40;
+let numberSize = 50;
+const ease = "sine.inOut";
+
 const data = [
     {
         type: 'Acrylic',
@@ -146,37 +157,61 @@ const data_weekly = [
         title: 'DRAWING',
         title2: 'FUNDAMENTALS',
         description: 'Our weekly drawing classes cover the essential techniques for creating detailed and realistic drawings. Students learn about line work, shading, and perspective, building a strong foundation for their artistic journey.',
-        image: 'https://kbmusee.github.io/kbmusee/012.JPG'
+        image: 'https://kbmusee.github.io/gallery/012.JPG'
     },
     {
         type: 'Weekly Art Classes',
         title: 'PAINTING',
         title2: 'MASTERCLASS',
         description: 'Join our painting masterclass to refine your skills and explore advanced techniques. These weekly sessions focus on various styles and mediums, allowing students to experiment and develop their unique artistic voice.',
-        image: 'https://kbmusee.github.io/kbmusee/013.JPG'
+        image: 'https://kbmusee.github.io/gallery/0.png'
     },
     {
         type: 'Weekly Art Classes',
         title: 'SCULPTURE',
         title2: 'STUDIES',
         description: 'Our sculpture classes provide hands-on experience with different materials and techniques. Students will learn to create three-dimensional art pieces, from initial concept to finished sculpture, exploring both traditional and contemporary styles.',
-        image: 'https://kbmusee.github.io/kbmusee/014.jpg'
+        image: 'https://kbmusee.github.io/gallery/014.jpg'
     },
     {
         type: 'Weekly Art Classes',
         title: 'MIXED MEDIA',
         title2: 'EXPERIMENTS',
         description: 'These classes encourage creativity and innovation through mixed media art. Students combine different materials and techniques to create unique pieces, learning to push the boundaries of traditional art forms.',
-        image: 'https://kbmusee.github.io/kbmusee/015.png'
+        image: 'https://kbmusee.github.io/gallery/015.png'
     },
     {
         type: 'Weekly Art Classes',
         title: 'FIGURE',
         title2: 'DRAWING',
         description: 'Figure drawing classes focus on capturing the human form with accuracy and expression. Students will learn about anatomy, proportion, and gesture to create dynamic and lifelike drawings.',
-        image: 'https://kbmusee.github.io/kbmusee/016.png'
+        image: 'https://kbmusee.github.io/gallery/016.png'
     }
 ];
+
+const data_mission = [
+      {
+        type: 'Mission Statement',
+        title: 'nurturing',
+        title2: 'inspiring',
+        description: 'At KB Musee, our mission is to cultivate a nurturing and inspiring environment where artists of all ages and skill levels can explore their creativity and develop their artistic talents. We are committed to offering a diverse range of art classes, from hourly sessions to after school programs and weekly courses, each designed to ignite passion and enhance skills in various artistic disciplines.',
+        image: 'https://kbmusee.github.io/gallery/43.JPG'
+      },
+      {
+        type: 'Mission Statement',
+        title: 'hands-on',
+        title2: 'collaborative',
+        description: 'Our curriculum spans traditional and contemporary techniques, including painting, drawing, sculpture, mixed media, and digital art. Through hands-on instruction and collaborative projects, we aim to build a strong foundation in the arts while encouraging individual expression and innovation.',
+        image: 'https://kbmusee.github.io/gallery/49.JPG'
+      },
+      {
+        type: 'Mission Statement',
+        title: 'transformative',
+        title2: 'inspirational',
+        description: 'We believe in the transformative power of art and strive to provide an inclusive space where creativity flourishes. Our dedicated Ivy league graduated instructor is here to guide and inspire, helping each student discover their unique artistic voice and achieve their full potential. Whether in-person or online, KB Musee is dedicated to making art education accessible and engaging for everyone.',
+        image: 'https://kbmusee.github.io/gallery/instructor.jpg'
+      },
+  ]
 
 const _ = (id) => document.getElementById(id);
 
@@ -215,6 +250,9 @@ function handleNavClick(event) {
         case 'weekly-art-classes-btn':
             renderCards(data_weekly);
             break;
+        case 'mission-statement-btn':
+            renderCards(data_mission);
+            break;
         default:
             renderCards(data);
             break;
@@ -225,7 +263,7 @@ function handleNavClick(event) {
 document.getElementById('hourly-sessions-btn').addEventListener('click', handleNavClick);
 document.getElementById('after-school-classes-btn').addEventListener('click', handleNavClick);
 document.getElementById('weekly-art-classes-btn').addEventListener('click', handleNavClick);
-
+document.getElementById('mission-statement-btn').addEventListener('click', handleNavClick);
 // Initial render
 renderCards(data);
 
@@ -256,16 +294,8 @@ function animate(target, duration, properties) {
   });
 }
 
-let order = [0, 1, 2, 3, 4, 5];
-let detailsEven = true;
 
-let offsetTop = 200;
-let offsetLeft = 700;
-let cardWidth = 200;
-let cardHeight = 300;
-let gap = 40;
-let numberSize = 50;
-const ease = "sine.inOut";
+
 
 function init() {
   const [active, ...rest] = order;
