@@ -32,13 +32,13 @@ body {
   padding-left: 16px;
 }
 
-.content-place {
+.content-type {
   margin-top: 6px;
   font-size: 13px;
   font-weight: 500;
 }
 
-.content-place {
+.content-type {
   font-weight: 500;
 }
 
@@ -62,15 +62,15 @@ body {
   top: 240px;
   left: 60px;
 }
-.details .place-box {
+.details .type-box {
   height: 46px;
   overflow: hidden;
 }
-.details .place-box .text {
+.details .type-box .text {
   padding-top: 16px;
   font-size: 20px;
 }
-.details .place-box .text:before {
+.details .type-box .text:before {
   top: 0;
   left: 0;
   position: absolute;
@@ -110,7 +110,7 @@ body {
   border-radius: 99px;
   color: white;
   display: grid;
-  place-items: center;
+  type-items: center;
 }
 .details > .cta > .bookmark svg {
   width: 20px;
@@ -197,7 +197,7 @@ nav > div:last-child > .active:after {
   border-radius: 999px;
   border: 2px solid #ffffff55;
   display: grid;
-  place-items: center;
+  type-items: center;
 }
 .pagination > .arrow:nth-child(2) {
   margin-left: 20px;
@@ -240,7 +240,7 @@ nav > div:last-child > .active:after {
   top: 0;
   left: 0;
   display: grid;
-  place-items: center;
+  type-items: center;
   font-size: 32px;
   font-weight: bold;
 }

@@ -1,55 +1,55 @@
 const data = [
     {
-        place: 'Acrylic',
+        type: 'Acrylic',
         title: 'VIBRANT',
         title2: 'HUES',
         description: 'Acrylic paintings are known for their vibrant colors and versatility. This medium allows for a range of textures and techniques, making it a favorite among contemporary artists. It dries quickly, enabling artists to layer colors and create dynamic compositions.',
         image: 'https://kbmusee.github.io/kbmusee/1.JPG'
     },
     {
-        place: 'Watercolor',
+        type: 'Watercolor',
         title: 'TRANSPARENT',
         title2: 'BEAUTY',
         description: 'Watercolor painting is admired for its delicate and translucent qualities. Artists use water to blend colors seamlessly, creating ethereal effects and soft gradients. This medium is often used to capture landscapes, botanicals, and expressive portraits.',
         image: 'https://kbmusee.github.io/kbmusee/2.JPG'
     },
     {
-        place: 'Ink Wash Painting',
+        type: 'Ink Wash Painting',
         title: 'MONOCHROME',
         title2: 'ELEGANCE',
         description: 'Ink wash painting, also known as literati painting, emphasizes simplicity and expressiveness. It uses varying tones of black ink on paper or silk to create depth and contrast. This traditional Asian art form often depicts natural scenes, animals, and calligraphy.',
         image: 'https://kbmusee.github.io/kbmusee/3.JPG'
     },
     {
-        place: 'Traditional Chinese Realistic Painting',
+        type: 'Traditional Chinese Realistic Painting',
         title: 'METICULOUS',
         title2: 'DETAIL',
         description: 'Traditional Chinese realistic painting, also known as Gongbi, is characterized by its precise and detailed brushwork. It often features intricate depictions of flora, fauna, and historical figures, capturing the beauty and elegance of each subject with remarkable accuracy.',
         image: 'https://kbmusee.github.io/kbmusee/6.JPG'
     },
     {
-        place: 'Sumi-e',
+        type: 'Sumi-e',
         title: 'ZEN',
         title2: 'ARTISTRY',
         description: 'Sumi-e is a Japanese ink painting technique that embodies Zen principles. It focuses on the beauty of simplicity, using minimal brushstrokes to convey the essence of a subject. Common themes include bamboo, plum blossoms, landscapes, and animals.',
         image: 'https://kbmusee.github.io/kbmusee/4.JPG'
     },
     {
-        place: 'Digital',
+        type: 'Digital',
         title: 'MODERN',
         title2: 'CREATIVITY',
         description: 'Digital art encompasses a wide range of styles and techniques, created using digital tools and software. This medium offers endless possibilities for experimentation and innovation, allowing artists to create intricate designs, animations, and interactive works.',
         image: 'https://kbmusee.github.io/kbmusee/8.JPG'
     },
     {
-        place: 'Sketch',
+        type: 'Sketch',
         title: 'RAW',
         title2: 'ESSENCE',
         description: 'Sketching captures the raw essence of an idea with quick, expressive lines. It is often the first step in the creative process, allowing artists to explore compositions and forms. Sketches can range from simple outlines to detailed studies, showcasing the artist\'s skill and vision.',
         image: 'https://kbmusee.github.io/kbmusee/7.png'
     },
     {
-        place: 'Pastel',
+        type: 'Pastel',
         title: 'SOFT',
         title2: 'TONES',
         description: 'Pastel artwork is known for its soft, velvety texture and rich, vibrant colors. Artists use pastel sticks to apply pigment directly to paper, blending and layering to achieve depth and luminosity. This medium is popular for portraits, landscapes, and still lifes.',
@@ -57,24 +57,177 @@ const data = [
     }
 ];
 
+const data_hourly = [
+    {
+        type: '2 Hour Painting Sessions',
+        title: 'EXPRESSIVE',
+        title2: 'BRUSHSTROKES',
+        description: 'Dive into the world of expressive painting with our hourly sessions focused on dynamic techniques using both brush and palette knife. These sessions help you capture emotion and movement on canvas, perfect for both beginners and experienced artists looking to explore new styles.',
+        image: 'https://kbmusee.github.io/gallery/01.png'
+    },
+    {
+        type: '2 Hour Painting Sessions',
+        title: 'COLOR',
+        title2: 'THEORY',
+        description: 'Enhance your understanding of color through our hourly painting sessions dedicated to color theory. Learn how to mix and match colors to create harmonious compositions, and understand the psychological impact of different hues and shades.',
+        image: 'https://kbmusee.github.io/gallery/02.JPG'
+    },
+    {
+        type: '2 Hour Painting Sessions',
+        title: 'LANDSCAPE',
+        title2: 'PAINTING',
+        description: 'Join our landscape painting sessions to capture the beauty of nature on canvas. Whether working from photographs or en plein air, you\'ll learn techniques for depicting light, shadow, and the varied textures of natural scenes.',
+        image: 'https://kbmusee.github.io/gallery/03.JPG'
+    },
+    {
+        type: '2 Hour Painting Sessions',
+        title: 'PORTRAIT',
+        title2: 'TECHNIQUES',
+        description: 'Our portrait painting sessions focus on the intricacies of capturing human likeness and emotion. Learn about proportion, anatomy, and the subtle details that bring portraits to life, perfect for artists at any skill level.',
+        image: 'https://kbmusee.github.io/gallery/04.JPG'
+    },
+    {
+        type: '2 Hour Painting Sessions',
+        title: 'STILL LIFE',
+        title2: 'COMPOSITIONS',
+        description: 'Explore the art of still life painting in our focused sessions. Study composition, lighting, and texture as you create detailed and realistic representations of everyday objects. These sessions are ideal for honing observational skills and technique.',
+        image: 'https://kbmusee.github.io/gallery/05.JPG'
+    },
+    {
+        type: 'Online Painting Sessions',
+        title: 'VIRTUAL',
+        title2: 'ARTISTRY',
+        description: 'Join our online painting sessions to enhance your skills from the comfort of your home. These virtual classes cover various techniques and styles, allowing you to interact with instructors and peers in real-time while exploring your creative potential.',
+        image: 'https://kbmusee.github.io/gallery/06.png'
+    }
+];
 
-const _ = (id)=>document.getElementById(id)
-const cards = data.map((i, index)=>`<div class="card" id="card${index}" style="background-image:url(${i.image})"  ></div>`).join('')
+const data_after_school = [
+    {
+        type: 'After School Classes',
+        title: 'CREATIVE',
+        title2: 'EXPLORATION',
+        description: 'Our after school classes provide a space for young artists to explore their creativity. Students experiment with various mediums and techniques, fostering artistic expression and developing foundational skills in a supportive environment.',
+        image: 'https://kbmusee.github.io/gallery/07.JPG'
+    },
+    {
+        type: 'After School Classes',
+        title: 'FUN',
+        title2: 'WITH COLORS',
+        description: 'These classes focus on the joy of painting, where students can play with vibrant colors and learn about color mixing and theory. It\'s a great way for kids to express themselves and build confidence in their artistic abilities.',
+        image: 'https://kbmusee.github.io/gallery/08.JPG'
+    },
+    {
+        type: 'After School Classes',
+        title: 'SKETCH',
+        title2: 'TECHNIQUES',
+        description: 'In our sketch classes, students will learn the fundamentals of drawing, including line, shading, and perspective. These sessions help young artists develop their technical skills and transform their ideas into detailed sketches.',
+        image: 'https://kbmusee.github.io/gallery/09.png'
+    },
+    {
+        type: 'After School Classes',
+        title: 'NATURE',
+        title2: 'INSPIRED',
+        description: 'These classes are designed for young artists who love nature. Students will learn to draw and paint plants, animals, and landscapes, developing their observation skills and appreciation for the natural world.',
+        image: 'https://kbmusee.github.io/gallery/010.png'
+    },
+    {
+        type: 'After School Classes',
+        title: 'COLLABORATIVE',
+        title2: 'PROJECTS',
+        description: 'Students work together on large-scale projects, learning the value of teamwork and collaboration. These projects can range from murals to group sculptures, encouraging social interaction and collective creativity.',
+        image: 'https://kbmusee.github.io/gallery/011.png'
+    }
+];
 
+const data_weekly = [
+    {
+        type: 'Weekly Art Classes',
+        title: 'DRAWING',
+        title2: 'FUNDAMENTALS',
+        description: 'Our weekly drawing classes cover the essential techniques for creating detailed and realistic drawings. Students learn about line work, shading, and perspective, building a strong foundation for their artistic journey.',
+        image: 'https://kbmusee.github.io/kbmusee/012.JPG'
+    },
+    {
+        type: 'Weekly Art Classes',
+        title: 'PAINTING',
+        title2: 'MASTERCLASS',
+        description: 'Join our painting masterclass to refine your skills and explore advanced techniques. These weekly sessions focus on various styles and mediums, allowing students to experiment and develop their unique artistic voice.',
+        image: 'https://kbmusee.github.io/kbmusee/013.JPG'
+    },
+    {
+        type: 'Weekly Art Classes',
+        title: 'SCULPTURE',
+        title2: 'STUDIES',
+        description: 'Our sculpture classes provide hands-on experience with different materials and techniques. Students will learn to create three-dimensional art pieces, from initial concept to finished sculpture, exploring both traditional and contemporary styles.',
+        image: 'https://kbmusee.github.io/kbmusee/014.jpg'
+    },
+    {
+        type: 'Weekly Art Classes',
+        title: 'MIXED MEDIA',
+        title2: 'EXPERIMENTS',
+        description: 'These classes encourage creativity and innovation through mixed media art. Students combine different materials and techniques to create unique pieces, learning to push the boundaries of traditional art forms.',
+        image: 'https://kbmusee.github.io/kbmusee/015.png'
+    },
+    {
+        type: 'Weekly Art Classes',
+        title: 'FIGURE',
+        title2: 'DRAWING',
+        description: 'Figure drawing classes focus on capturing the human form with accuracy and expression. Students will learn about anatomy, proportion, and gesture to create dynamic and lifelike drawings.',
+        image: 'https://kbmusee.github.io/kbmusee/016.png'
+    }
+];
 
+const _ = (id) => document.getElementById(id);
 
-const cardContents = data.map((i, index)=>`<div class="card-content" id="card-content-${index}">
-<div class="content-start"></div>
-<div class="content-place">${i.place}</div>
-<div class="content-title-1">${i.title}</div>
-<div class="content-title-2">${i.title2}</div>
+function renderCards(data) {
+    const cards = data.map((i, index) =>
+        `<div class="card" id="card${index}" style="background-image:url(${i.image})"></div>`
+    ).join('');
 
-</div>`).join('')
+    const cardContents = data.map((i, index) =>
+        `<div class="card-content" id="card-content-${index}">
+            <div class="content-start"></div>
+            <div class="content-type">${i.type}</div>
+            <div class="content-title-1">${i.title}</div>
+            <div class="content-title-2">${i.title2}</div>
+        </div>`
+    ).join('');
 
+    const slideNumbers = data.map((_, index) =>
+        `<div class="item" id="slide-item-${index}">${index + 1}</div>`
+    ).join('');
 
-const sildeNumbers = data.map((_, index)=>`<div class="item" id="slide-item-${index}" >${index+1}</div>`).join('')
-_('demo').innerHTML =  cards + cardContents
-_('slide-numbers').innerHTML =  sildeNumbers
+    _('demo').innerHTML = cards + cardContents;
+    _('slide-numbers').innerHTML = slideNumbers;
+
+    init();
+}
+
+function handleNavClick(event) {
+    switch (event.target.id) {
+        case 'hourly-sessions-btn':
+            renderCards(data_hourly);
+            break;
+        case 'after-school-classes-btn':
+            renderCards(data_after_school);
+            break;
+        case 'weekly-art-classes-btn':
+            renderCards(data_weekly);
+            break;
+        default:
+            renderCards(data);
+            break;
+    }
+}
+
+// Add event listeners to navigation buttons
+document.getElementById('hourly-sessions-btn').addEventListener('click', handleNavClick);
+document.getElementById('after-school-classes-btn').addEventListener('click', handleNavClick);
+document.getElementById('weekly-art-classes-btn').addEventListener('click', handleNavClick);
+
+// Initial render
+renderCards(data);
 
 
 const range = (n) =>
@@ -212,8 +365,8 @@ function step() {
     const detailsActive = detailsEven ? "#details-even" : "#details-odd";
     const detailsInactive = detailsEven ? "#details-odd" : "#details-even";
 
-    document.querySelector(`${detailsActive} .place-box .text`).textContent =
-      data[order[0]].place;
+    document.querySelector(`${detailsActive} .type-box .text`).textContent =
+      data[order[0]].type;
     document.querySelector(`${detailsActive} .title-1`).textContent =
       data[order[0]].title;
     document.querySelector(`${detailsActive} .title-2`).textContent =
