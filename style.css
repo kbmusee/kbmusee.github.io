@@ -61,6 +61,8 @@ body {
   position: absolute;
   top: 240px;
   left: 60px;
+  padding: 10px;
+  background-color: #1a1a1a88;
 }
 .details .type-box {
   height: 46px;
@@ -109,8 +111,9 @@ body {
   height: 36px;
   border-radius: 99px;
   color: white;
-  display: grid;
-  type-items: center;
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
 }
 .details > .cta > .bookmark svg {
   width: 20px;
@@ -154,6 +157,9 @@ nav > div {
   text-transform: uppercase;
   font-size: 14px;
 }
+nav .program:hover {
+  background-color:  #1a1a1a88;
+}
 nav > div:first-child {
   gap: 10px;
 }
@@ -196,8 +202,9 @@ nav > div:last-child > .active:after {
   height: 50px;
   border-radius: 999px;
   border: 2px solid #ffffff55;
-  display: grid;
-  type-items: center;
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
 }
 .pagination > .arrow:nth-child(2) {
   margin-left: 20px;

@@ -9,7 +9,7 @@ let gap = 40;
 let numberSize = 50;
 const ease = "sine.inOut";
 
-const data = [
+const data_default = [
     {
         type: 'Acrylic',
         title: 'VIBRANT',
@@ -81,14 +81,14 @@ const data_hourly = [
         title: 'COLOR',
         title2: 'THEORY',
         description: 'Enhance your understanding of color through our hourly painting sessions dedicated to color theory. Learn how to mix and match colors to create harmonious compositions, and understand the psychological impact of different hues and shades.',
-        image: 'https://kbmusee.github.io/gallery/02.JPG'
+        image: 'https://kbmusee.github.io/gallery/01.JPG'
     },
     {
         type: '2 Hour Painting Sessions',
         title: 'LANDSCAPE',
         title2: 'PAINTING',
         description: 'Join our landscape painting sessions to capture the beauty of nature on canvas. Whether working from photographs or en plein air, you\'ll learn techniques for depicting light, shadow, and the varied textures of natural scenes.',
-        image: 'https://kbmusee.github.io/gallery/03.JPG'
+        image: 'https://kbmusee.github.io/gallery/18.JPG'
     },
     {
         type: '2 Hour Painting Sessions',
@@ -213,59 +213,43 @@ const data_mission = [
       },
   ]
 
+const dataSets = {
+    default: data_default,
+    hourly: data_hourly,
+    afterSchool: data_after_school,
+    weekly: data_weekly,
+    mission: data_mission
+};
+
+let currentDataSet = "default";
 const _ = (id) => document.getElementById(id);
+loadDataSet();
+function loadDataSet(){
+  const cards = dataSets[currentDataSet].map((i, index)=>`<div class="card" id="card${index}" style="background-image:url(${i.image})"  ></div>`).join('');
 
-function renderCards(data) {
-    const cards = data.map((i, index) =>
-        `<div class="card" id="card${index}" style="background-image:url(${i.image})"></div>`
-    ).join('');
+  const cardContents = dataSets[currentDataSet].map((i, index)=>`<div class="card-content" id="card-content-${index}">
+  <div class="content-start"></div>
+  <div class="content-place">${i.type}</div>
+  <div class="content-title-1">${i.title}</div>
+  <div class="content-title-2">${i.title2}</div>
 
-    const cardContents = data.map((i, index) =>
-        `<div class="card-content" id="card-content-${index}">
-            <div class="content-start"></div>
-            <div class="content-type">${i.type}</div>
-            <div class="content-title-1">${i.title}</div>
-            <div class="content-title-2">${i.title2}</div>
-        </div>`
-    ).join('');
+  </div>`).join('')
 
-    const slideNumbers = data.map((_, index) =>
-        `<div class="item" id="slide-item-${index}">${index + 1}</div>`
-    ).join('');
 
-    _('demo').innerHTML = cards + cardContents;
-    _('slide-numbers').innerHTML = slideNumbers;
-
-    init();
+  const sildeNumbers = dataSets[currentDataSet].map((_, index)=>`<div class="item" id="slide-item-${index}" >${index+1}</div>`).join('');
+  _('demo').innerHTML =  cards + cardContents;
+  _('slide-numbers').innerHTML =  sildeNumbers;
 }
 
 function handleNavClick(event) {
-    switch (event.target.id) {
-        case 'hourly-sessions-btn':
-            renderCards(data_hourly);
-            break;
-        case 'after-school-classes-btn':
-            renderCards(data_after_school);
-            break;
-        case 'weekly-art-classes-btn':
-            renderCards(data_weekly);
-            break;
-        case 'mission-statement-btn':
-            renderCards(data_mission);
-            break;
-        default:
-            renderCards(data);
-            break;
-    }
+    currentDataSet = event.target.id.replace('-btn', '').replace(/-([a-z])/g, g => g[1].toUpperCase());
+    loadDataSet();
 }
 
 // Add event listeners to navigation buttons
-document.getElementById('hourly-sessions-btn').addEventListener('click', handleNavClick);
-document.getElementById('after-school-classes-btn').addEventListener('click', handleNavClick);
-document.getElementById('weekly-art-classes-btn').addEventListener('click', handleNavClick);
-document.getElementById('mission-statement-btn').addEventListener('click', handleNavClick);
-// Initial render
-renderCards(data);
+['default','hourly', 'after-school', 'weekly', 'mission'].forEach(id => {
+    document.getElementById(`${id}-btn`).addEventListener('click', handleNavClick);
+});
 
 
 const range = (n) =>
@@ -293,8 +277,6 @@ function animate(target, duration, properties) {
     });
   });
 }
-
-
 
 
 function init() {
@@ -391,18 +373,20 @@ function step() {
   return new Promise((resolve) => {
     order.push(order.shift());
     detailsEven = !detailsEven;
-
+    var cur = order[0];
     const detailsActive = detailsEven ? "#details-even" : "#details-odd";
     const detailsInactive = detailsEven ? "#details-odd" : "#details-even";
-
+    if (cur >= dataSets[currentDataSet].length) {
+      cur = 0; //reset
+    }
     document.querySelector(`${detailsActive} .type-box .text`).textContent =
-      data[order[0]].type;
+      dataSets[currentDataSet][cur].type;
     document.querySelector(`${detailsActive} .title-1`).textContent =
-      data[order[0]].title;
+      dataSets[currentDataSet][cur].title;
     document.querySelector(`${detailsActive} .title-2`).textContent =
-      data[order[0]].title2;
+      dataSets[currentDataSet][cur].title2;
     document.querySelector(`${detailsActive} .desc`).textContent =
-      data[order[0]].description;
+      dataSets[currentDataSet][cur].description;
 
     gsap.set(detailsActive, { zIndex: 22 });
     gsap.to(detailsActive, { opacity: 1, delay: 0.4, ease });
@@ -544,7 +528,7 @@ async function loadImage(src) {
 }
 
 async function loadImages() {
-  const promises = data.map(({ image }) => loadImage(image));
+  const promises = dataSets[currentDataSet].map(({ image }) => loadImage(image));
   return Promise.all(promises);
 }
 
@@ -557,4 +541,4 @@ async function start() {
   }
 }
 
-start()
+start();
