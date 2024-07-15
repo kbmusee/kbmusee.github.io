@@ -666,7 +666,7 @@ fetch(event.target.action, {
     })
   }
 }).catch(error => {
-  status.innerHTML = "Oops! There was a problem submitting your form, would you like to send us an email instead? <a href="mailto:kbmusee@gmail.com">kbmusee@gmail.com</a>";
+  status.innerHTML = "Oops! There was a problem submitting your form, would you like to send us an email instead? <a href='mailto:kbmusee@gmail.com'>kbmusee@gmail.com</a>";
 });
 }
 form.addEventListener("submit", handleSubmit);
