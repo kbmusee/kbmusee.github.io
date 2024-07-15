@@ -234,14 +234,14 @@ const data_student = [
         title: 'CAT',
         title2: 'ELEGANCE',
         description: 'Ginger cat, emphasizing its sleek fur and large round eyes. The quick session captures the grace and mystery of this beloved pet.',
-        image: '/gallery/student3.png'
+        image: '/gallery/student3.jpg'
     },
     {
         type: '2 Hour Painting Session',
         title: 'PUPPY',
         title2: 'CHARM',
         description: 'This heartwarming acrylic painting shows a joyful puppy. The young artist uses bright, contrasting colors to enhance the lively expression of the dog.',
-        image: '/gallery/student4.png'
+        image: '/gallery/student4.jpg'
     }
 ];
 
