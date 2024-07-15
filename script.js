@@ -281,7 +281,7 @@ function handleNavClick(event) {
 }
 
 // Add event listeners to navigation buttons
-['default','hourly', 'after-school', 'weekly', 'mission'].forEach(id => {
+['default','hourly', 'after-school', 'weekly', 'mission', 'student'].forEach(id => {
     document.getElementById(`${id}-btn`).addEventListener('click', handleNavClick);
 });
 
