@@ -211,14 +211,47 @@ const data_mission = [
         description: 'We believe in the transformative power of art and strive to provide an inclusive space where creativity flourishes. Our dedicated Ivy league graduated instructor is here to guide and inspire, helping each student discover their unique artistic voice and achieve their full potential. Whether in-person or online, KB Musee is dedicated to making art education accessible and engaging for everyone.',
         image: '/gallery/instructor.jpg'
       },
-  ]
+  ];
+
+
+const data_student = [
+    {
+        type: 'Weekly Sessions',
+        title: 'DOG',
+        title2: 'PORTRAIT',
+        description: 'This vibrant acrylic painting captures the shape and structure of Labrador Retrievers, using bold colors and dynamic brushstrokes to bring the pet to life on canvas.',
+        image: '/gallery/student2.png'
+    },
+    {
+        type: 'Weekly Sessions',
+        title: 'FLORAL',
+        title2: 'BLOOM',
+        description: 'The young artist uses a rich palette and textured brushwork to highlight the vibrant beauty and warmth of the flowers.',
+        image: '/gallery/student1.png'
+    },
+    {
+        type: '2 Hour Painting Session',
+        title: 'CAT',
+        title2: 'ELEGANCE',
+        description: 'Ginger cat, emphasizing its sleek fur and large round eyes. The quick session captures the grace and mystery of this beloved pet.',
+        image: '/gallery/student3.png'
+    },
+    {
+        type: '2 Hour Painting Session',
+        title: 'PUPPY',
+        title2: 'CHARM',
+        description: 'This heartwarming acrylic painting shows a joyful puppy. The young artist uses bright, contrasting colors to enhance the lively expression of the dog.',
+        image: '/gallery/student4.png'
+    }
+];
 
 const dataSets = {
     default: data_default,
     hourly: data_hourly,
     afterSchool: data_after_school,
     weekly: data_weekly,
-    mission: data_mission
+    mission: data_mission,
+    student: data_student
 };
 
 let currentDataSet = "default";
@@ -560,7 +593,19 @@ function showContactSection() {
     // Hide other sections and show contact section
     document.getElementById('demo').style.display = 'none';
     document.getElementById('contact-section').style.display = 'block';
+
+    // List of background images
+    const backgroundImages = ['/gallery/52.JPG', '/gallery/39.JPG', '/gallery/40.JPG', '/gallery/41.JPG', '/gallery/34.JPG', '/gallery/18.JPG', '/gallery/26.JPG', '/gallery/28.JPG', '/gallery/22.JPG', '/gallery/36.JPG'];
+
+    // Select a random background image
+    const randomImage = backgroundImages[Math.floor(Math.random() * backgroundImages.length)];
+
+    // Set the random background image
+    document.getElementById('contact-section').style.backgroundImage = `url('${randomImage}')`;
+    document.getElementById('contact-section').style.backgroundSize = 'cover';
+    document.getElementById('contact-section').style.backgroundPosition = 'center';
 }
+
 const navItems = document.querySelectorAll('#nav-items .program, #nav-items .active');
 
 navItems.forEach(item => {
