@@ -259,6 +259,17 @@ const _ = (id) => document.getElementById(id);
 loadDataSet();
 function loadDataSet(){
   document.getElementById('contact-section').style.display = 'none';
+  // Enable previous animation and hide details
+  const detailsElements = document.querySelectorAll('.details');
+    detailsElements.forEach(element => {
+        element.style.display = 'block';
+    });
+
+  const paginationElements = document.querySelectorAll('.pagination, .arrow, .progress-sub-container');
+    paginationElements.forEach(element => {
+        element.style.display = 'block';
+    });
+
   const cards = dataSets[currentDataSet].map((i, index)=>`<div class="card" id="card${index}" style="background-image:url(${i.image})"  ></div>`).join('');
 
   const cardContents = dataSets[currentDataSet].map((i, index)=>`<div class="card-content" id="card-content-${index}">
@@ -604,6 +615,17 @@ function showContactSection() {
     document.getElementById('contact-section').style.backgroundImage = `url('${randomImage}')`;
     document.getElementById('contact-section').style.backgroundSize = 'cover';
     document.getElementById('contact-section').style.backgroundPosition = 'center';
+
+    // Disable previous animation and hide details
+    const detailsElements = document.querySelectorAll('.details');
+    detailsElements.forEach(element => {
+        element.style.display = 'none';
+    });
+
+    const paginationElements = document.querySelectorAll('.pagination, .arrow, .progress-sub-container');
+    paginationElements.forEach(element => {
+        element.style.display = 'none';
+    });
 }
 
 const navItems = document.querySelectorAll('#nav-items .program, #nav-items .active');
