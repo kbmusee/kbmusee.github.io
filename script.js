@@ -219,28 +219,28 @@ const data_student = [
         type: 'Weekly Sessions',
         title: 'DOG',
         title2: 'PORTRAIT',
-        description: 'This vibrant acrylic painting captures the shape and structure of Labrador Retrievers, using bold colors and dynamic brushstrokes to bring the pet to life on canvas.',
+        description: '',
         image: '/gallery/student2.png'
     },
     {
         type: 'Weekly Sessions',
         title: 'FLORAL',
         title2: 'BLOOM',
-        description: 'The young artist uses a rich palette and textured brushwork to highlight the vibrant beauty and warmth of the flowers.',
+        description: '',
         image: '/gallery/student1.png'
     },
     {
         type: '2 Hour Painting Session',
         title: 'CAT',
         title2: 'ELEGANCE',
-        description: 'Ginger cat, emphasizing its sleek fur and large round eyes. The quick session captures the grace and mystery of this beloved pet.',
+        description: '',
         image: '/gallery/student3.jpg'
     },
     {
         type: '2 Hour Painting Session',
         title: 'PUPPY',
         title2: 'CHARM',
-        description: 'This heartwarming acrylic painting shows a joyful puppy. The young artist uses bright, contrasting colors to enhance the lively expression of the dog.',
+        description: '',
         image: '/gallery/student4.jpg'
     }
 ];
