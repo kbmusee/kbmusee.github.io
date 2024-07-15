@@ -195,7 +195,7 @@ nav > div:last-child > .active:after {
   position: absolute;
   left: 0px;
   top: 0px;
-  display: inline-flex;
+  display: none;
 }
 .pagination > .arrow {
   z-index: 60;
