@@ -314,6 +314,9 @@ nav > div:last-child > .active:after {
 }
 /* Hide nav items and show hamburger menu on mobile */
 @media (max-width: 768px) {
+  footer {
+      display: none;
+    }
   .hamburger {
     display: flex;
 
